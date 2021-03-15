@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .layui-footer {
   text-align: center;
   font-size: 12px;
@@ -51,4 +52,9 @@ a{
     position: relative;
     top: 4px;
     margin-right: 10px;
+=======
+.layui-footer{
+    text-align: center;
+    font-size: 12px;
+>>>>>>> 04caa6d389c5a80ce1ddc76f7fd99c6321dcba82
 }

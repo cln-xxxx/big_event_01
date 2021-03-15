@@ -20,4 +20,3 @@ $.ajaxPrefilter(function (options) {
         }
     }
 })
-
