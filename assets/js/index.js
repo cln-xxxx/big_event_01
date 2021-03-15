@@ -1,7 +1,7 @@
 //入口函数
 $(function () {
     //1，获取用户信息
-    getUserInof();
+    getUserInfo();
 
     //2，退出
     var layer = layui.layer;
@@ -20,7 +20,7 @@ $(function () {
 })
 //获取用户信息(封装到入口 函数的外面)
 //  原因：后面其他的页面要调用
-function getUserInof() {
+function getUserInfo() {
     //发送ajax
     $.ajax({
         url: '/my/userinfo',
@@ -30,7 +30,7 @@ function getUserInof() {
         // },
         success: function (res) {
             // console.log(res);
-            if (res.status != 0) {
+            if (res.status !=  0) {
                 return layui.layer.msg('获取用户信息失败!')
             }
             //调用renderAvatar渲染用户的头像
