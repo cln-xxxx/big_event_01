@@ -4,15 +4,15 @@ $(function () {
     getUserInof();
 
     //2，退出
-    var layer=layui.layer;
-    $('#btnlogout').on('click',function(){
+    var layer = layui.layer;
+    $('#btnlogout').on('click', function () {
         //框架提供的询问方式
         layer.confirm('是否确认退出登录？', { icon: 3, title: '提示' }, function (index) {
             //do something
             //1，清空本地token
             localStorage.removeItem('token');
             //2.页面跳转
-            location.href='/login.html'
+            location.href = '/login.html'
             //关闭询问框
             layer.close(index);
         });
@@ -31,7 +31,7 @@ function getUserInof() {
         success: function (res) {
             // console.log(res);
             if (res.status != 0) {
-                return layui.layui.msg('获取用户信息失败!')
+                return layui.layer.msg('获取用户信息失败!')
             }
             //调用renderAvatar渲染用户的头像
             renderAvatar(res.data)
@@ -53,5 +53,6 @@ function renderAvatar(user) {
         //3,2 渲染文本头像
         var first = name[0].toUpperCase()
         $('.text-avatar').html(first).show()
+        $('.layui-nav-img').hide()
     }
 }
